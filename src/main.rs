@@ -4,12 +4,12 @@ use std::io;
 
 fn main() {
     println!("Guess the number!");
-    let secret_number = rand::thread_rng().gen_range(1..=100);
-    let mut count = 0;
-    let max_tries = 10;
+    let secret_number: u32 = rand::thread_rng().gen_range(1..=100);
+    let mut count:i32 = 0;
+    let max_tries:i32 = 10;
 
     loop {
-        let mut guess = String::new();
+        let mut guess:String = String::new();
         println!("your tries left {}", max_tries - count);
         println!("Please input your guess.");
 
